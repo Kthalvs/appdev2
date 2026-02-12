@@ -1,26 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
 // import LotsOfStyles from './assets/components/LotsOfStyles'; 
 // import FixedDimensionsBasics from './assets/components/FixedDimensionsBasics';
-import FlexDimensionsBasics from './assets/components/FlexDimensionsBasics';
+// import FlexDimensionsBasics from './assets/components/FlexDimensionsBasics';
+import PercentageDimensionsBasics from './assets/components/PercentageDimensionsBasics';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View>
       {/* <LotsOfStyles /> */}
       {/* <FixedDimensionsBasics /> */}
-      <FlexDimensionsBasics />
-
+      {/* <FlexDimensionsBasics /> */}
+      <PercentageDimensionsBasics />
       <StatusBar style="auto" />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'left',
-    justifyContent: 'center',
-  },
-});
+
