@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import LotsOfStyles from './assets/components/LotsOfStyles'; 
-
+// import LotsOfStyles from './assets/components/LotsOfStyles'; 
+import FixedDimensionsBasics from './assets/components/FixedDimensionsBasics';
 export default function App() {
   return (
     <View style={styles.container}>
-      <LotsOfStyles />
+      {/* <LotsOfStyles /> */}
+      <FixedDimensionsBasics />
       <StatusBar style="auto" />
     </View>
   );
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
+    alignItems: 'left',
     justifyContent: 'center',
   },
 });
