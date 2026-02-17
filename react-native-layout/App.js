@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Login from './screens/Login';
+import Signup from './screens/Signup';
 
 export default function App() {
+  const [currentScreen, setCurrentScreen] = useState('Login');
+
+  const navigation = {
+    navigate: (screen) => setCurrentScreen(screen),
+  };
+
   return (
     <View style={styles.container}>
-      <Login />
+      {currentScreen === 'Login' ? (
+        <Login navigation={navigation} />
+      ) : (
+        <Signup navigation={navigation} />
+      )}
     </View>
   );
 }
