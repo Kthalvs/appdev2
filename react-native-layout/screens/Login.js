@@ -26,7 +26,7 @@ export default function Login({ navigation }) {
 
         {/* Logo / Image */}
         <Image
-         source={require('../assets/images/login-image.png')}
+          source={require('../assets/images/login-image.png')}
           style={styles.image}
           resizeMode="contain"
         />
@@ -75,11 +75,11 @@ export default function Login({ navigation }) {
         </TouchableOpacity>
 
         {/* Login Button */}
-        <TouchableOpacity style={styles.loginButton}>
-          <Ionicons name="log-in-outline" size={20} color="#fff" style={{ marginRight: 8 }} />
+        <TouchableOpacity style={styles.loginButton} onPress={() => navigation.navigate('Todo')}>
+          <Ionicons name="log-in-outline" size={20} color="#fff" style={{ marginRight: 8 }}/>
           <Text style={styles.loginButtonText}>Login</Text>
         </TouchableOpacity>
-
+        
         {/* Divider */}
         <View style={styles.dividerRow}>
           <View style={styles.dividerLine} />
