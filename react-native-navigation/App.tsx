@@ -38,13 +38,14 @@ function DetailsScreen({ route }) {
       <Text>otherParam: {JSON.stringify(otherParam)}</Text>
       <Button
         onPress={() =>
-          navigation.push('Details', {
+          navigation.setParams({
             itemId: Math.floor(Math.random() * 100),
           })
         }
       >
-        Go to Details... again
+        Update the itemId param
       </Button>
+      <Button onPress={() => navigation.goBack()}>Go back</Button>
     </View>
   );
 }
