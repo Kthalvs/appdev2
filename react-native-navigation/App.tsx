@@ -5,19 +5,29 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 function HomeScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Home Screen</Text>
     </View>
   );
 }
 
-const Stack = createNativeStackNavigator({
+function DetailsScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Details Screen</Text>
+    </View>
+  );
+}
+
+const RootStack = createNativeStackNavigator({
+  initialRouteName: 'Home',
   screens: {
     Home: HomeScreen,
+    Details: DetailsScreen,
   },
 });
 
-const Navigation = createStaticNavigation(Stack);
+const Navigation = createStaticNavigation(RootStack);
 
 export default function App() {
   return <Navigation />;
